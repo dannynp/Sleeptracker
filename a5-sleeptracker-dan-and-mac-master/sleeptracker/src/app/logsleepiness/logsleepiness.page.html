@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button color = "light" (click)="back()">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  
+      <ion-title>Daytime Sleepiness Log</ion-title>
+  
+      <ion-buttons slot="end">
+        <ion-button color = "light" (click)="add()">Add</ion-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding fullscreen >
+
+  <ion-list radio-group >
+    <ion-radio-group>
+      <ion-list-header>
+        Degrees of Sleepiness
+      </ion-list-header>
+  
+      <ion-item class = "item1">
+        <ion-label class = "label1"><strong>1</strong> - Feeling active or wide awake	</ion-label>
+        <ion-radio color = "light" value="1" (ionSelect)="sleepinessScale=1"></ion-radio>
+      </ion-item>
+  
+      <ion-item class = "item1">
+        <ion-label class = "label1"><strong>2</strong> - Able to concentrate</ion-label>
+        <ion-radio color = "light" value="2" (ionSelect)="sleepinessScale=2"></ion-radio>
+      </ion-item>
+  
+      <ion-item class = "item1">
+        <ion-label class = "label1"><strong>3</strong> - Awake, but relaxed</ion-label>
+        <ion-radio color = "light" value="3" (ionSelect)="sleepinessScale=3"></ion-radio>
+      </ion-item>
+  
+      <ion-item class = "item1">
+        <ion-label class = "label1"><strong>4</strong> - Somewhat foggy, let down</ion-label>
+        <ion-radio color = "light" value="4" (ionSelect)="sleepinessScale=4"></ion-radio>
+      </ion-item>
+  
+      <ion-item class = "item1">
+        <ion-label class = "label1"><strong>5</strong> - Foggy, slowed down</ion-label>
+        <ion-radio color = "light" value="5" (ionSelect)="sleepinessScale=5"></ion-radio>
+      </ion-item>
+
+      <ion-item class = "item1">
+          <ion-label class = "label1"><strong>6</strong> - Sleepy, prefer to lie down</ion-label>
+          <ion-radio color = "light" value="6" (ionSelect)="sleepinessScale=6"></ion-radio>
+        </ion-item>
+
+      <ion-item class = "item1">
+          <ion-label class = "label1"><strong>7</strong> - No longer fighting sleep</ion-label>
+          <ion-radio color = "light" value="7" (ionSelect)="sleepinessScale=7"></ion-radio>
+        </ion-item>
+
+
+      </ion-radio-group>
+    </ion-list>
+
+
+    <ion-item class = "item1">
+        <ion-label position="floating" class = "label1">
+          <ion-icon name="time" start></ion-icon>
+          Select Time of Sleepiness
+        </ion-label>
+        <ion-datetime displayFormat="hh:mm A" [(ngModel)]="sleepinessTime" ></ion-datetime>
+      </ion-item>
+      
+</ion-content>

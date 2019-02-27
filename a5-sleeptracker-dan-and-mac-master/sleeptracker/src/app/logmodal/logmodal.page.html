@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color = "light" (click)="dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>
+      Log: {{id}}
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p><strong>Date</strong>: {{date}}</p>
+  <p><strong>Summary</strong>: {{summary}}</p>
+</ion-content>

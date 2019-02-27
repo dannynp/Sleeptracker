@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color = "light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Your Sleep Data</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-tabs>
+
+    <ion-tab tab="Overnight" >
+      <ion-list >
+        <ion-item-sliding *ngFor="let data of allOvernightData">
+          <ion-item class = "item1" (click)="logClick(data.id, data.dateString(), data.summaryString())">
+            <ion-label >{{data.dateString()}}: {{data.summaryString()}}</ion-label>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-tab>
+
+    <ion-tab tab="Daytime Sleepiness">
+      <ion-list>
+        <ion-item-sliding *ngFor="let data of allSleepinessData">
+          <ion-item class = "item1" (click)="logClick(data.id, data.dateString(), data.summaryString())">
+            <ion-label>{{data.dateString()}}: {{data.summaryString()}}</ion-label>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-tab>
+
+    <ion-tab tab="All">
+      <ion-list>
+        <ion-item-sliding *ngFor="let data of allSleepData">
+          <ion-item class = "item1"(click)="logClick(data.id, data.dateString(), data.summaryString())">
+            <ion-label>{{data.dateString()}}: {{data.summaryString()}}</ion-label>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+    </ion-tab>
+
+
+    <ion-tab-bar slot="bottom" class = "fix">
+  
+      <ion-tab-button tab="Overnight" class = "tabs1">
+        <ion-label>
+          Overnight
+        </ion-label>
+        <ion-icon name="moon"></ion-icon>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="Daytime Sleepiness" class = "tabs1">
+        <ion-label >
+          Day Sleepiness
+        </ion-label>
+        <ion-icon  name="sunny"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="All" class = "tabs1">
+        <ion-label >
+          All Data
+        </ion-label>
+        <ion-icon  name="analytics"></ion-icon>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+
+
+
+  </ion-tabs>
+
+</ion-content>

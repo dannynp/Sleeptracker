@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color = "light" (click)="back()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Overnight Sleep Log</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color = "light" (click)="add()">Add</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding fullscreen>
+  <ion-icon name="bed" class = "label1"></ion-icon>
+  <!-- Label and Input components for selecting sleep log date, start, and end times -->
+
+  <ion-item class = "item1">
+    <ion-label position="floating" class = "label1">
+      <ion-icon name="moon" start></ion-icon>
+        Select Sleep Start
+      </ion-label>
+    <ion-datetime displayFormat="hh:mm A" [(ngModel)]="sleepStart"></ion-datetime>
+  </ion-item>
+
+  <ion-item class = "item2">
+    <ion-label position="floating" class = "label1">
+      <ion-icon name="sunny" start></ion-icon>
+      Select Sleep End
+    </ion-label>
+    <ion-datetime color = "light" displayFormat="hh:mm A" [(ngModel)]="sleepEnd"></ion-datetime>
+  </ion-item>
+
+</ion-content>

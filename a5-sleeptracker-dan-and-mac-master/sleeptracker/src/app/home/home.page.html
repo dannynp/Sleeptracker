@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      The Sleep Logger 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding fullscreen class ="bg-style"> 
+  <br>
+  <br>
+  <ion-button color = "light" shape = "round" id="logovernight" expand="full" (click)="gotoLogOvernight()">Log Overnight Sleep</ion-button>
+  <br>
+  <ion-button color = "light" shape = "round" id="logdaytimesleepiness" expand="full" (click)="gotoLogSleepiness()">Log Daytime Sleepiness</ion-button>
+  <br>
+  <ion-button color = "light" shape = "round" id="viewdata" expand="full" (click)="gotoViewLog()">View Logged Data</ion-button>
+</ion-content>

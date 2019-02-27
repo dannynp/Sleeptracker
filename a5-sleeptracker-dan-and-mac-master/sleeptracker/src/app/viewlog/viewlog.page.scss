@@ -1,0 +1,27 @@
+ion-title {
+    --color: white;
+  }
+
+  ion-toolbar{
+    --background:#5C5A5A;
+  }
+  
+  ion-content{
+    --background: linear-gradient(to left bottom, #474343, #5c5858, #716d6d, #878383, #9e9a9a);;
+    }
+
+
+  .item1{
+    --background: #787373;
+    --color: white;
+  }
+  
+  .tabs1{
+    --background: #5C5A5A;
+    --color-selected: white;
+  }
+.fix{
+  bottom: 0;
+  width: 100%;
+  position: fixed !important;
+}
